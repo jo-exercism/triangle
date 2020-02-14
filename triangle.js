@@ -22,7 +22,10 @@ export class Triangle {
     let triangleSides = [this.side1, this.side2, this.side3];
 
     let duplicates = triangleSides.filter((side, index) => triangleSides.indexOf(side) == index);
-    return duplicates.length === 2 ? true : false;
+    if(duplicates.length === 2) {
+      var validateTriangle = duplicates[0] * 2 >= duplicates[1] && duplicates[1] * 2 >= duplicates[0] ? true : false;
+    }
+    return duplicates.length === 1 || duplicates.length === 2 && validateTriangle ? true : false;
   }
 
   isScalene() {
