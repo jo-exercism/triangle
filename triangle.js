@@ -15,7 +15,7 @@ export class Triangle {
 
     let duplicates = triangleSides.filter((side, index) => triangleSides.indexOf(side) == index);
     console.log(duplicates)
-    return duplicates.length == 1 ? true : false;
+    return duplicates[0] && duplicates.length === 1 ? true : false;
   }
 
   isIsosceles() {
